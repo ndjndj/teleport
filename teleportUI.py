@@ -20,6 +20,11 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
         self.dirTree = QtWidgets.QTreeView(self.centralwidget)
+
+        self.dirTree.model = QtWidgets.QFileSystemModel()
+        self.dirTree.model.setRootPath(QtCore.QDir.currentPath())
+        self.dirTree.setModel(self.dirTree.model)
+
         self.dirTree.setMinimumSize(QtCore.QSize(50, 0))
         self.dirTree.setSizeIncrement(QtCore.QSize(50, 0))
         self.dirTree.setBaseSize(QtCore.QSize(50, 0))
