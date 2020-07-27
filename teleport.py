@@ -8,7 +8,7 @@ class Main(QtWidgets.QMainWindow):
     super(Main, self).__init__(parent)
     self.ui = Ui_MainWindow()
     self.ui.setupUi(self)
-  
+    print("test")
   def webPageUpdate(self):
     self.ui.webView.setUrl(QUrl(self.ui.urlEdit.text()))
 
